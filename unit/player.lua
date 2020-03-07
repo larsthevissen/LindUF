@@ -58,7 +58,7 @@ LindUF.Player.CastBar:ClearAllPoints()
 LindUF.Player.CastBar:SetHeight(8)
 LindUF.Player.CastBar:SetWidth(300)
 LindUF.Player.CastBar:SetReverseFill(true)
-LindUF.Player.CastBar:SetPoint("TOP", LindUF.Player, "BOTTOM", 0, -20)
+LindUF.Player.CastBar:SetPoint("BOTTOM", LindUF.Player, "TOP", 0, 20)
 
 -- LindUF:HealthText(LindUF.Player)
 -- LindUF.Player.HealthText:ClearAllPoints()
