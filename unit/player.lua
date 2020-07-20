@@ -7,20 +7,19 @@ f:SetHeight(15)
 f:SetPoint("RIGHT", UIParent, "CENTER", -100, -150)
 
 
-LindUF:health(f)
-f.HealthBar.Texture:SetColorTexture(1,0,0,.7)
-f.HealthBar:SetReverseFill(true)
+LindUF:HealthBar(f)
+f.HealthBar.Texture:SetColorTexture(1, 0, 0, .7)
 f.HealthBar:ClearAllPoints()
 f.HealthBar:SetWidth(300)
 f.HealthBar:SetHeight(15)
 f.HealthBar:SetPoint("RIGHT", UIParent, "CENTER", -100, -150)
 
 LindUF:power(f)
-f.PowerBar.Texture:SetColorTexture(1,0,0,.5)
+f.PowerBar.Texture:SetColorTexture(1, 0, 0, .5)
 f.PowerBar:ClearAllPoints()
 f.PowerBar:SetWidth(300)
 f.PowerBar:SetHeight(5)
-f.PowerBar:SetPoint("TOP", f.HealthBar, "BOTTOM", 0, -1)
+f.PowerBar:SetPoint("TOP", f.HealthBar, "BOTTOM", -20, -20)
 
 
 -- f.PowerBar.Texture:SetVertexOffset(3, -5, 0)
@@ -67,5 +66,5 @@ LindUF.Player.CastBar:SetPoint("BOTTOM", LindUF.Player, "TOP", 0, 20)
 
 
 
-PlayerFrame:SetScript("OnEvent", nil);
-PlayerFrame:Hide();
+-- PlayerFrame:SetScript("OnEvent", nil);
+-- PlayerFrame:Hide();

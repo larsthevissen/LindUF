@@ -5,7 +5,7 @@ targettarget:SetHeight(20)
 targettarget:ClearAllPoints()
 targettarget:SetPoint("TOPLEFT", LindUF.Target, "BOTTOMLEFT", 0, -15)
 
-LindUF:health(targettarget)
+LindUF:HealthBar(targettarget)
 local f = targettarget.HealthBar
 f.Texture:SetColorTexture(1,0,0,.7)
 f:ClearAllPoints()

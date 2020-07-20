@@ -3,7 +3,7 @@ LindUF.font = "Fonts\\2002.TTF"
 LindUF.border = "Interface\\Addons\\LindUF\\LindBorder.tga"
 LindUF.bg = "Interface\\Addons\\LindUF\\LindBar.tga"
 
-LindUF.Units = {} -- ???
+-- LindUF.Units = {} -- ???
 
 LindUF.PowerColor = function(unit)
   local powerType, powerToken, altR, altG, altB = UnitPowerType(unit)
@@ -28,13 +28,21 @@ end
 function LindUF:Texture(frame)
   tx = frame:CreateTexture()
   tx:SetAllPoints(frame)
-  tx:SetColorTexture(0, 0, 0, .7)
+  tx:SetColorTexture(0, 0, 0, .2)
   return tx
 end
 
 function LindUF:LindBar(p, n)
   local f = CreateFrame("Statusbar", p.unit..n, p)
   f.Background = CreateFrame("Frame", p.unit..n.."Background", p)
+  f.Background:SetBackdrop({
+    bgFile = LindUF.bg,
+    edgeFile = LindUF.border,
+    tile = true, tileSize = 0, edgeSize = 4,
+    insets = { left = 0, right = 0, top = 0, bottom = 0 }
+  })
+  f.Background:SetBackdropColor(0,0,0,0)
+  f.Background:SetBackdropBorderColor(1,1,1,1)
 
   f.Texture = LindUF:Texture(f)
   f:SetStatusBarTexture(f.Texture)
@@ -54,27 +62,7 @@ function LindUF:LindBar(p, n)
   return f
 end
 
--- function LindUF:LindBar(p, n)
---   local f = {}
---   f.bg = CreateFrame("Frame", p.unit..n, p)
---   f.bg:SetWidth(32)
---   f.bg:SetHeight(32)
---   f.bg:SetPoint("CENTER", UIParent, "CENTER", 0, 0)
---   f.bgtx = LindUF:Texture(f.bg)
---   -- f.bg.texture = f.bgtx
---   f.bg:SetFrameStrata("BACKGROUND")
---   f.bg:SetFrameLevel(0)
---   f.bar = CreateFrame("StatusBar", p.unit..n.."bar", f.bg)
---   f.bar:SetAllPoints(f.bg)
---   f.bar:SetMinMaxValues(0,1)
---   f.bar:SetValue(1)
---   f.bar:SetFrameStrata("BACKGROUND")
---   f.bar:SetFrameLevel(1)
---   f.bar.tx = LindUF:Texture(f.bar)
---   f.bar.tx:SetColorTexture(1,0,0,.5)
---   f.bar:SetStatusBarTexture(f.bar.tx)
---   return f
--- end
+
 -- reposition the alternative Power Bar
 PlayerPowerBarAlt:ClearAllPoints()
 PlayerPowerBarAlt:SetParent("UIParent")

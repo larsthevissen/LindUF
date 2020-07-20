@@ -1,10 +1,5 @@
 -- target.lua START --
 
--- LindUF.Target = LindUF:UnitFrame("target")
--- LindUF.Target:ClearAllPoints()
--- LindUF.Target:SetWidth(300)
--- LindUF.Target:SetHeight(15)
--- LindUF.Target:SetPoint("LEFT", UIParent, "CENTER", 100, -100)
 
 local f = LindUF:UnitFrame("target")
 f:ClearAllPoints()
@@ -12,8 +7,9 @@ f:SetWidth(300)
 f:SetHeight(15)
 f:SetPoint("LEFT", UIParent, "CENTER", 100, -150)
 
-LindUF:health(f)
+LindUF:HealthBar(f)
 f.HealthBar.Texture:SetColorTexture(1, 0, 0, .7)
+f.HealthBar:SetReverseFill(true)
 f.HealthBar:ClearAllPoints()
 f.HealthBar:SetWidth(300)
 f.HealthBar:SetHeight(15)
@@ -100,6 +96,6 @@ lol.tx:SetColorTexture(1,1,1,.2)
 
 LindUF.Target = f
 
-TargetFrame:SetScript("OnEvent", nil);
-TargetFrame:Hide();
+-- TargetFrame:SetScript("OnEvent", nil);
+-- TargetFrame:Hide();
 -- target.lua END --
