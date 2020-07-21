@@ -7,7 +7,7 @@ f:SetHeight(15)
 f:SetPoint("RIGHT", UIParent, "CENTER", -100, -150)
 
 
-LindUF:HealthBar(f)
+f.HealthBar = LindUF:HealthBar(f)
 f.HealthBar.Texture:SetColorTexture(1, 0, 0, .7)
 f.HealthBar:ClearAllPoints()
 f.HealthBar:SetWidth(300)

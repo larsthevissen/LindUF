@@ -5,7 +5,7 @@ LindUF.Pet:SetHeight(20)
 LindUF.Pet:ClearAllPoints()
 LindUF.Pet:SetPoint("BOTTOMLEFT", LindUF.Player, "TOPLEFT", 0, 10)
 
-LindUF:HealthBar(LindUF.Pet)
+LindUF.Pet.HealthBar = LindUF:HealthBar(LindUF.Pet)
 
 LindUF:Name(LindUF.Pet)
 LindUF.Pet.Name:ClearAllPoints()

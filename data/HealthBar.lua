@@ -8,8 +8,8 @@ function LindUF:HealthBar(p)
   f:SetScript("OnEvent", function(self, event)
     local health = UnitHealth(p.unit)
     local healthMax = UnitHealthMax(p.unit)
-    self:SetMinMaxValues(0, healthMax)
-    self:SetValue(healthMax-health)
+    -- self:SetMinMaxValues(0, healthMax)
+    self:SetValue(health/healthMax)
   end)
-  p.HealthBar = f
+  return f
 end
