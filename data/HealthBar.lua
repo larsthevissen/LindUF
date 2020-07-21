@@ -5,11 +5,11 @@ function LindUF:HealthBar(p)
   f:RegisterEvent("VARIABLES_LOADED")
   f:RegisterEvent("PLAYER_ENTERING_WORLD")
   -- f.bar:RegisterEvent("UNIT_TARGET")
-  f:SetScript("OnEvent", function(self, event)
+  f:SetScript("OnUpdate", function(self, event)
     local health = UnitHealth(p.unit)
     local healthMax = UnitHealthMax(p.unit)
     -- self:SetMinMaxValues(0, healthMax)
-    self:SetValue(health/healthMax)
+    self:SetValue(1-health/healthMax)
   end)
   return f
 end
