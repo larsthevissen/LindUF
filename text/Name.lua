@@ -28,7 +28,9 @@ function LindUF:Name(p)
       name = string.sub(name, 1, self.length)
     end
     if name ~= self.name then
+      local r, g, b = LindUF.ClassColor(self.unit)
       self.Text:SetText(name)
+      self.Text:SetTextColor(r, g, b)
       self.name = name
     end
 

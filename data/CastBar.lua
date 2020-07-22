@@ -2,7 +2,6 @@
 
 CastingBarFrame:UnregisterAllEvents()
 
--- LindUF.CastBar = function(self, p)
 function LindUF:CastBar(p)
   if not p then return end
   if p.CastBar then return end

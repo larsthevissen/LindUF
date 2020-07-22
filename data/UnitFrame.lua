@@ -1,5 +1,4 @@
 -- DROPDOWN START --
--- LindUF.DropDown = function(self, p)
 function LindUF:DropDown(p)
   f = CreateFrame("FRAME", "ldd."..p.unit, p, "UIDropDownMenuTemplate")
 
@@ -45,7 +44,6 @@ end
 
 -- -- DROPDOWN END --
 
--- LindUF.UnitFrame = function(self, unit)
 function LindUF:UnitFrame(unit)
 
   local f = CreateFrame("Button", "Lind."..unit, UIParent, "SecureUnitButtonTemplate")

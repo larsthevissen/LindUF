@@ -3,8 +3,6 @@ LindUF.font = "Fonts\\2002.TTF"
 LindUF.border = "Interface\\Addons\\LindUF\\LindBorder.tga"
 LindUF.bg = "Interface\\Addons\\LindUF\\LindBar.tga"
 
--- LindUF.Units = {} -- ???
-
 LindUF.PowerColor = function(unit)
   local powerType, powerToken, altR, altG, altB = UnitPowerType(unit)
   local info = PowerBarColor[powerToken]
@@ -35,14 +33,6 @@ end
 function LindUF:LindBar(p, n)
   local f = CreateFrame("Statusbar", p.unit..n, p)
   f.Background = CreateFrame("Frame", p.unit..n.."Background", p)
-  -- f.Background:SetBackdrop({
-  --   bgFile = LindUF.bg,
-  --   edgeFile = LindUF.border,
-  --   tile = true, tileSize = 0, edgeSize = 4,
-  --   insets = { left = 0, right = 0, top = 0, bottom = 0 }
-  -- })
-  -- f.Background:SetBackdropColor(0,0,0,0)
-  -- f.Background:SetBackdropBorderColor(1,1,1,1)
 
   f.Texture = LindUF:Texture(f)
   f:SetStatusBarTexture(f.Texture)
@@ -61,7 +51,6 @@ function LindUF:LindBar(p, n)
 
   return f
 end
-
 
 -- reposition the alternative Power Bar
 PlayerPowerBarAlt:ClearAllPoints()
