@@ -28,21 +28,21 @@ end
 function LindUF:Texture(frame)
   tx = frame:CreateTexture()
   tx:SetAllPoints(frame)
-  tx:SetColorTexture(0, 0, 0, .2)
+  tx:SetColorTexture(0, 0, 0, .5)
   return tx
 end
 
 function LindUF:LindBar(p, n)
   local f = CreateFrame("Statusbar", p.unit..n, p)
   f.Background = CreateFrame("Frame", p.unit..n.."Background", p)
-  f.Background:SetBackdrop({
-    bgFile = LindUF.bg,
-    edgeFile = LindUF.border,
-    tile = true, tileSize = 0, edgeSize = 4,
-    insets = { left = 0, right = 0, top = 0, bottom = 0 }
-  })
-  f.Background:SetBackdropColor(0,0,0,0)
-  f.Background:SetBackdropBorderColor(1,1,1,1)
+  -- f.Background:SetBackdrop({
+  --   bgFile = LindUF.bg,
+  --   edgeFile = LindUF.border,
+  --   tile = true, tileSize = 0, edgeSize = 4,
+  --   insets = { left = 0, right = 0, top = 0, bottom = 0 }
+  -- })
+  -- f.Background:SetBackdropColor(0,0,0,0)
+  -- f.Background:SetBackdropBorderColor(1,1,1,1)
 
   f.Texture = LindUF:Texture(f)
   f:SetStatusBarTexture(f.Texture)

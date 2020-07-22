@@ -15,6 +15,10 @@ f.HealthBar:SetWidth(90)
 f.HealthBar:SetHeight(15)
 f.HealthBar:SetPoint("TOPRIGHT", f, "TOPRIGHT", 0, 0)
 f.HealthBar:SetMinMaxValues(0, .33)
+f.HealthBar.Texture:SetVertexOffset(3, -10, 0)
+f.HealthBar.BackgroundTexture:SetVertexOffset(3, -10, 0)
+f.HealthBar.Texture:SetVertexOffset(1, -10, 0)
+f.HealthBar.BackgroundTexture:SetVertexOffset(1, -10, 0)
 
 f.HealthBar2 = LindUF:HealthBar(f)
 f.HealthBar2.Texture:SetColorTexture(1, 0, 0, .7)
@@ -24,6 +28,10 @@ f.HealthBar2:SetWidth(90)
 f.HealthBar2:SetHeight(15)
 f.HealthBar2:SetPoint("RIGHT", f.HealthBar, "LEFT", -5, 0)
 f.HealthBar2:SetMinMaxValues(.33, .66)
+f.HealthBar2.Texture:SetVertexOffset(3, -10, 0)
+f.HealthBar2.BackgroundTexture:SetVertexOffset(3, -10, 0)
+f.HealthBar2.Texture:SetVertexOffset(1, -10, 0)
+f.HealthBar2.BackgroundTexture:SetVertexOffset(1, -10, 0)
 
 f.HealthBar3 = LindUF:HealthBar(f)
 f.HealthBar3.Texture:SetColorTexture(1, 0, 0, .7)
@@ -33,6 +41,10 @@ f.HealthBar3:SetWidth(90)
 f.HealthBar3:SetHeight(15)
 f.HealthBar3:SetPoint("RIGHT", f.HealthBar2, "LEFT", -5, 0)
 f.HealthBar3:SetMinMaxValues(.66, 1)
+f.HealthBar3.Texture:SetVertexOffset(3, -10, 0)
+f.HealthBar3.BackgroundTexture:SetVertexOffset(3, -10, 0)
+f.HealthBar3.Texture:SetVertexOffset(1, -10, 0)
+f.HealthBar3.BackgroundTexture:SetVertexOffset(1, -10, 0)
 
 LindUF:power(f)
 f.PowerBar.Texture:SetColorTexture(1, 0, 0, .5)
@@ -42,16 +54,13 @@ f.PowerBar:SetHeight(10)
 f.PowerBar:SetPoint("TOPRIGHT", f.HealthBar, "BOTTOMRIGHT", 0, -2)
 
 
--- f.PowerBar.Texture:SetVertexOffset(3, -5, 0)
--- f.PowerBar.BackgroundTexture:SetVertexOffset(3, -5, 0)
--- f.PowerBar.Texture:SetVertexOffset(1, -5, 0)
--- f.PowerBar.BackgroundTexture:SetVertexOffset(1, -5, 0)
+f.PowerBar.Texture:SetVertexOffset(4, -5, 0)
+f.PowerBar.BackgroundTexture:SetVertexOffset(4, -5, 0)
+f.PowerBar.Texture:SetVertexOffset(2, -5, 0)
+f.PowerBar.BackgroundTexture:SetVertexOffset(2, -5, 0)
 
 
--- f.HealthBar.Texture:SetVertexOffset(3, -10, 0)
--- f.HealthBar.BackgroundTexture:SetVertexOffset(3, -10, 0)
--- f.HealthBar.Texture:SetVertexOffset(1, -10, 0)
--- f.HealthBar.BackgroundTexture:SetVertexOffset(1, -10, 0)
+
 
 LindUF.Player = f
 
