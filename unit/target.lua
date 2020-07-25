@@ -69,7 +69,7 @@ f.CastBar:SetPoint("BOTTOM", f, "TOP", 0, 20)
 
 LindUF:Name(f)
 f.Name:ClearAllPoints()
-f.Name:SetPoint("BOTTOMLEFT", f, "TOPLEFT", 0, 10)
+f.Name:SetPoint("BOTTOMLEFT", f, "TOPLEFT", 5, 8)
 f.Name.Text:ClearAllPoints()
 f.Name.Text:SetPoint("LEFT", 0, 0)
 
@@ -81,14 +81,14 @@ f.HealthText.Text:SetPoint("RIGHT", 0, 0)
 
 f.HealthAbs = LindUF:HealthAbs(f)
 f.HealthAbs:ClearAllPoints()
-f.HealthAbs:SetPoint("LEFT", f.HealthBar3, "RIGHT", 10, 0)
-f.HealthAbs.Text:ClearAllPoints()
-f.HealthAbs.Text:SetPoint("LEFT", 0, 0)
+f.HealthAbs:SetPoint("BOTTOMRIGHT", f.HealthBar3, "TOPRIGHT", 0, 8)
+-- f.HealthAbs.Text:ClearAllPoints()
+-- f.HealthAbs.Text:SetPoint("LEFT", 0, 0)
 
 
 
 LindUF.Target = f
 
--- TargetFrame:SetScript("OnEvent", nil);
--- TargetFrame:Hide();
+TargetFrame:SetScript("OnEvent", nil);
+TargetFrame:Hide();
 -- target.lua END --

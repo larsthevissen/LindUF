@@ -95,5 +95,5 @@ LindUF.Player.CastBar:SetPoint("BOTTOM", LindUF.Player, "TOP", 0, 20)
 
 
 
--- PlayerFrame:SetScript("OnEvent", nil);
--- PlayerFrame:Hide();
+PlayerFrame:SetScript("OnEvent", nil);
+PlayerFrame:Hide();
