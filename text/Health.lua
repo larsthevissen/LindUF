@@ -18,6 +18,7 @@ function LindUF:HealthText(p)
   f:SetScript("OnUpdate", function(self, elapsed)
     local health = UnitHealth(self.unit)
     local healthMax = UnitHealthMax(self.unit)
+    if healthMax == 0 then healthMax = 1 end
     local percent = 100*health/healthMax
     local output = string.format("%.1f", percent)
 

@@ -91,4 +91,5 @@ LindUF.Target = f
 
 TargetFrame:SetScript("OnEvent", nil);
 TargetFrame:Hide();
+TargetFrameTextureFrame:Hide();
 -- target.lua END --
